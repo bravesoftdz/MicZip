@@ -2,6 +2,9 @@
 
 interface
 
+{$reference 'System.IO.Packaging.dll'}
+{$reference 'System.IO.FileSystem.Primitives.dll'}
+
 uses System, System.Drawing, System.Windows.Forms, System.ComponentModel;
 
 var
@@ -55,7 +58,8 @@ begin
   if(comboBox1.Text = 'None') then CompressLevel := System.IO.Compression.CompressionLevel.NoCompression;
   if(comboBox1.Text = 'Fast') then CompressLevel := System.IO.Compression.CompressionLevel.Fastest;
   if(comboBox1.Text = 'Optimal') then CompressLevel := System.IO.Compression.CompressionLevel.Optimal;
-  //System.IO.Compression.DeflateStream.Create(textBox1.Text, CompressLevel, false);
+  //System.IO.Packaging.Package.Open(textBox1.Text, System.IO.FileMode.Create);
+  //var Archive := new System.IO.Compression.DeflateStream(textBox1.Text, CompressLevel, true);
   Close;
 end;
 

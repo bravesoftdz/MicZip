@@ -106,15 +106,15 @@ procedure InitializeComponent;
         // 
         self.label2.Location := new System.Drawing.Point(12, 45);
         self.label2.Name := 'label2';
-        self.label2.Size := new System.Drawing.Size(52, 13);
+        self.label2.Size := new System.Drawing.Size(55, 13);
         self.label2.TabIndex := 5;
-        self.label2.Text := 'Filename:';
+        self.label2.Text := 'File name:';
         // 
         // textBox1
         // 
-        self.textBox1.Location := new System.Drawing.Point(70, 42);
+        self.textBox1.Location := new System.Drawing.Point(73, 42);
         self.textBox1.Name := 'textBox1';
-        self.textBox1.Size := new System.Drawing.Size(172, 20);
+        self.textBox1.Size := new System.Drawing.Size(169, 20);
         self.textBox1.TabIndex := 6;
         // 
         // button3

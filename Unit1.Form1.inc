@@ -15,8 +15,6 @@ procedure InitializeComponent;
         self.pictureBox4 := new System.Windows.Forms.PictureBox();
         self.linkLabel3 := new System.Windows.Forms.LinkLabel();
         self.pictureBox3 := new System.Windows.Forms.PictureBox();
-        self.linkLabel1 := new System.Windows.Forms.LinkLabel();
-        self.pictureBox2 := new System.Windows.Forms.PictureBox();
         self.linkLabel2 := new System.Windows.Forms.LinkLabel();
         self.pictureBox1 := new System.Windows.Forms.PictureBox();
         self.panel2 := new System.Windows.Forms.Panel();
@@ -33,12 +31,13 @@ procedure InitializeComponent;
         self.radioButton1 := new System.Windows.Forms.RadioButton();
         self.pictureBox5 := new System.Windows.Forms.PictureBox();
         self.label1 := new System.Windows.Forms.Label();
+        self.pictureBox2 := new System.Windows.Forms.PictureBox();
+        self.linkLabel1 := new System.Windows.Forms.LinkLabel();
         self.menuStrip1.SuspendLayout();
         self.panel1.SuspendLayout();
         self.groupBox1.SuspendLayout();
         (System.ComponentModel.ISupportInitialize(self.pictureBox4)).BeginInit();
         (System.ComponentModel.ISupportInitialize(self.pictureBox3)).BeginInit();
-        (System.ComponentModel.ISupportInitialize(self.pictureBox2)).BeginInit();
         (System.ComponentModel.ISupportInitialize(self.pictureBox1)).BeginInit();
         self.panel2.SuspendLayout();
         self.groupBox3.SuspendLayout();
@@ -47,6 +46,7 @@ procedure InitializeComponent;
         (System.ComponentModel.ISupportInitialize(self.pictureBox7)).BeginInit();
         (System.ComponentModel.ISupportInitialize(self.pictureBox6)).BeginInit();
         (System.ComponentModel.ISupportInitialize(self.pictureBox5)).BeginInit();
+        (System.ComponentModel.ISupportInitialize(self.pictureBox2)).BeginInit();
         self.SuspendLayout();
         // 
         // menuStrip1
@@ -185,26 +185,6 @@ procedure InitializeComponent;
         self.pictureBox3.Size := new System.Drawing.Size(16, 16);
         self.pictureBox3.TabIndex := 6;
         self.pictureBox3.TabStop := false;
-        // 
-        // linkLabel1
-        // 
-        self.linkLabel1.LinkColor := System.Drawing.Color.FromArgb((System.Int32((System.Byte(5)))), (System.Int32((System.Byte(195)))), (System.Int32((System.Byte(255)))));
-        self.linkLabel1.Location := new System.Drawing.Point(24, 78);
-        self.linkLabel1.Name := 'linkLabel1';
-        self.linkLabel1.Size := new System.Drawing.Size(94, 16);
-        self.linkLabel1.TabIndex := 2;
-        self.linkLabel1.TabStop := true;
-        self.linkLabel1.Text := 'Settings';
-        self.linkLabel1.TextAlign := System.Drawing.ContentAlignment.MiddleLeft;
-        // 
-        // pictureBox2
-        // 
-        self.pictureBox2.Image := (System.Drawing.Image(resources.GetObject('pictureBox2.Image')));
-        self.pictureBox2.Location := new System.Drawing.Point(6, 78);
-        self.pictureBox2.Name := 'pictureBox2';
-        self.pictureBox2.Size := new System.Drawing.Size(16, 16);
-        self.pictureBox2.TabIndex := 4;
-        self.pictureBox2.TabStop := false;
         // 
         // linkLabel2
         // 
@@ -378,6 +358,26 @@ procedure InitializeComponent;
         self.label1.Text := 'OS Version on Machine Name';
         self.label1.TextAlign := System.Drawing.ContentAlignment.BottomRight;
         // 
+        // pictureBox2
+        // 
+        self.pictureBox2.Image := (System.Drawing.Image(resources.GetObject('pictureBox2.Image')));
+        self.pictureBox2.Location := new System.Drawing.Point(6, 78);
+        self.pictureBox2.Name := 'pictureBox2';
+        self.pictureBox2.Size := new System.Drawing.Size(16, 16);
+        self.pictureBox2.TabIndex := 4;
+        self.pictureBox2.TabStop := false;
+        // 
+        // linkLabel1
+        // 
+        self.linkLabel1.LinkColor := System.Drawing.Color.FromArgb((System.Int32((System.Byte(5)))), (System.Int32((System.Byte(195)))), (System.Int32((System.Byte(255)))));
+        self.linkLabel1.Location := new System.Drawing.Point(24, 78);
+        self.linkLabel1.Name := 'linkLabel1';
+        self.linkLabel1.Size := new System.Drawing.Size(94, 16);
+        self.linkLabel1.TabIndex := 2;
+        self.linkLabel1.TabStop := true;
+        self.linkLabel1.Text := 'Settings';
+        self.linkLabel1.TextAlign := System.Drawing.ContentAlignment.MiddleLeft;
+        // 
         // Form1
         // 
         self.ClientSize := new System.Drawing.Size(434, 311);
@@ -398,7 +398,6 @@ procedure InitializeComponent;
         self.groupBox1.ResumeLayout(false);
         (System.ComponentModel.ISupportInitialize(self.pictureBox4)).EndInit();
         (System.ComponentModel.ISupportInitialize(self.pictureBox3)).EndInit();
-        (System.ComponentModel.ISupportInitialize(self.pictureBox2)).EndInit();
         (System.ComponentModel.ISupportInitialize(self.pictureBox1)).EndInit();
         self.panel2.ResumeLayout(false);
         self.groupBox3.ResumeLayout(false);
@@ -407,6 +406,7 @@ procedure InitializeComponent;
         (System.ComponentModel.ISupportInitialize(self.pictureBox7)).EndInit();
         (System.ComponentModel.ISupportInitialize(self.pictureBox6)).EndInit();
         (System.ComponentModel.ISupportInitialize(self.pictureBox5)).EndInit();
+        (System.ComponentModel.ISupportInitialize(self.pictureBox2)).EndInit();
         self.ResumeLayout(false);
         self.PerformLayout();
     end;

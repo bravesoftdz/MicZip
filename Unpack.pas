@@ -12,7 +12,7 @@ type
     procedure button4_Click(sender: Object; e: EventArgs);
     procedure button1_Click(sender: Object; e: EventArgs);
   {$region FormDesigner}
-  private 
+  private
     {$resource Unpack.UnpackForm.resources}
     panel1: Panel;
     label1: &Label;

@@ -16,5 +16,7 @@
     <Item Type="Reference" AssemblyName="System.Xml" FullAssemblyName="System.Xml.dll" />
     <Item Type="Reference" AssemblyName="System.Xml.Linq" FullAssemblyName="System.Xml.Linq.dll" />
     <Item Type="Reference" AssemblyName="CustomMarshalers" FullAssemblyName="CustomMarshalers.dll" />
+    <Item Type="Reference" AssemblyName="System.IO.FileSystem.Primitives" FullAssemblyName="System.IO.FileSystem.Primitives.dll" />
+    <Item Type="Reference" AssemblyName="System.IO.Packaging" FullAssemblyName="System.IO.Packaging.dll" />
   </Items>
 </Project>
