@@ -2,6 +2,9 @@
 
 interface
 
+{$reference 'System.IO.Packaging.dll'}
+{$reference 'System.IO.FileSystem.Primitives.dll'}
+
 uses System, System.Drawing, System.Windows.Forms, System.ComponentModel;
 
 type

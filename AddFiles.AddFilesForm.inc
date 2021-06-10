@@ -120,7 +120,7 @@ procedure InitializeComponent;
         // 
         // button4
         // 
-        self.button4.Location := new System.Drawing.Point(179, 120);
+        self.button4.Location := new System.Drawing.Point(6, 120);
         self.button4.Name := 'button4';
         self.button4.Size := new System.Drawing.Size(75, 23);
         self.button4.TabIndex := 11;
@@ -130,7 +130,7 @@ procedure InitializeComponent;
         // 
         // button5
         // 
-        self.button5.Location := new System.Drawing.Point(6, 120);
+        self.button5.Location := new System.Drawing.Point(179, 120);
         self.button5.Name := 'button5';
         self.button5.Size := new System.Drawing.Size(75, 23);
         self.button5.TabIndex := 12;

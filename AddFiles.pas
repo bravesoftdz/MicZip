@@ -2,6 +2,9 @@
 
 interface
 
+{$reference 'System.IO.Packaging.dll'}
+{$reference 'System.IO.FileSystem.Primitives.dll'}
+
 uses System, System.Drawing, System.Windows.Forms, System.ComponentModel;
 
 type
@@ -15,7 +18,7 @@ type
     procedure openFileDialog2_FileOk(sender: Object; e: CancelEventArgs);
     procedure button5_Click(sender: Object; e: EventArgs);
   {$region FormDesigner}
-  private
+  private 
     {$resource AddFiles.AddFilesForm.resources}
     panel1: Panel;
     label1: &Label;
