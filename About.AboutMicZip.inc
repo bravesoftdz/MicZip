@@ -1,14 +1,19 @@
 procedure InitializeComponent;
     begin
         var resources: System.ComponentModel.ComponentResourceManager := new System.ComponentModel.ComponentResourceManager(typeof(AboutMicZip));
+        var listViewGroup11: System.Windows.Forms.ListViewGroup := new System.Windows.Forms.ListViewGroup('ListViewGroup', System.Windows.Forms.HorizontalAlignment.Left);
+        var listViewItem11: System.Windows.Forms.ListViewItem := new System.Windows.Forms.ListViewItem('Zip');
         self.pictureBox1 := new System.Windows.Forms.PictureBox();
         self.linkLabel1 := new System.Windows.Forms.LinkLabel();
         self.tabControl1 := new System.Windows.Forms.TabControl();
         self.tabPage1 := new System.Windows.Forms.TabPage();
         self.richTextBox1 := new System.Windows.Forms.RichTextBox();
+        self.tabPage2 := new System.Windows.Forms.TabPage();
+        self.listView1 := new System.Windows.Forms.ListView();
         (System.ComponentModel.ISupportInitialize(self.pictureBox1)).BeginInit();
         self.tabControl1.SuspendLayout();
         self.tabPage1.SuspendLayout();
+        self.tabPage2.SuspendLayout();
         self.SuspendLayout();
         // 
         // pictureBox1
@@ -41,6 +46,7 @@ procedure InitializeComponent;
         // tabControl1
         // 
         self.tabControl1.Controls.Add(self.tabPage1);
+        self.tabControl1.Controls.Add(self.tabPage2);
         self.tabControl1.Location := new System.Drawing.Point(12, 82);
         self.tabControl1.Name := 'tabControl1';
         self.tabControl1.SelectedIndex := 0;
@@ -68,6 +74,36 @@ procedure InitializeComponent;
         self.richTextBox1.TabIndex := 0;
         self.richTextBox1.Text := resources.GetString('richTextBox1.Text');
         // 
+        // tabPage2
+        // 
+        self.tabPage2.Controls.Add(self.listView1);
+        self.tabPage2.Location := new System.Drawing.Point(4, 22);
+        self.tabPage2.Name := 'tabPage2';
+        self.tabPage2.Padding := new System.Windows.Forms.Padding(3);
+        self.tabPage2.Size := new System.Drawing.Size(252, 141);
+        self.tabPage2.TabIndex := 1;
+        self.tabPage2.Text := 'Supported formats';
+        self.tabPage2.UseVisualStyleBackColor := true;
+        // 
+        // listView1
+        // 
+        self.listView1.BackgroundImage := (System.Drawing.Image(resources.GetObject('listView1.BackgroundImage')));
+        self.listView1.Dock := System.Windows.Forms.DockStyle.Fill;
+        self.listView1.ForeColor := System.Drawing.Color.White;
+        self.listView1.FullRowSelect := true;
+        listViewGroup11.Header := 'ListViewGroup';
+        listViewGroup11.Name := 'All supported formats';
+        self.listView1.Groups.AddRange(new System.Windows.Forms.ListViewGroup[1](listViewGroup11));
+        self.listView1.HeaderStyle := System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+        self.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[1](listViewItem11));
+        self.listView1.LabelWrap := false;
+        self.listView1.Location := new System.Drawing.Point(3, 3);
+        self.listView1.Name := 'listView1';
+        self.listView1.Size := new System.Drawing.Size(246, 135);
+        self.listView1.TabIndex := 0;
+        self.listView1.UseCompatibleStateImageBehavior := false;
+        self.listView1.View := System.Windows.Forms.View.Tile;
+        // 
         // AboutMicZip
         // 
         self.BackgroundImage := (System.Drawing.Image(resources.GetObject('$this.BackgroundImage')));
@@ -87,5 +123,6 @@ procedure InitializeComponent;
         (System.ComponentModel.ISupportInitialize(self.pictureBox1)).EndInit();
         self.tabControl1.ResumeLayout(false);
         self.tabPage1.ResumeLayout(false);
+        self.tabPage2.ResumeLayout(false);
         self.ResumeLayout(false);
     end;
