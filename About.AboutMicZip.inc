@@ -89,6 +89,7 @@ procedure InitializeComponent;
         // 
         self.listView1.BackgroundImage := (System.Drawing.Image(resources.GetObject('listView1.BackgroundImage')));
         self.listView1.Dock := System.Windows.Forms.DockStyle.Fill;
+        self.listView1.Font := new System.Drawing.Font('Segoe UI', 9.75, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte(204)));
         self.listView1.ForeColor := System.Drawing.Color.White;
         self.listView1.FullRowSelect := true;
         listViewGroup11.Header := 'ListViewGroup';
