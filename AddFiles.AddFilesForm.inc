@@ -15,9 +15,13 @@ procedure InitializeComponent;
         self.button5 := new System.Windows.Forms.Button();
         self.groupBox1 := new System.Windows.Forms.GroupBox();
         self.openFileDialog2 := new System.Windows.Forms.OpenFileDialog();
+        self.groupBox2 := new System.Windows.Forms.GroupBox();
+        self.comboBox1 := new System.Windows.Forms.ComboBox();
+        self.label3 := new System.Windows.Forms.Label();
         self.panel1.SuspendLayout();
         (System.ComponentModel.ISupportInitialize(self.pictureBox1)).BeginInit();
         self.groupBox1.SuspendLayout();
+        self.groupBox2.SuspendLayout();
         self.SuspendLayout();
         // 
         // panel1
@@ -57,7 +61,7 @@ procedure InitializeComponent;
         // 
         // button1
         // 
-        self.button1.Location := new System.Drawing.Point(197, 226);
+        self.button1.Location := new System.Drawing.Point(197, 281);
         self.button1.Name := 'button1';
         self.button1.Size := new System.Drawing.Size(75, 23);
         self.button1.TabIndex := 2;
@@ -67,7 +71,7 @@ procedure InitializeComponent;
         // 
         // button2
         // 
-        self.button2.Location := new System.Drawing.Point(12, 226);
+        self.button2.Location := new System.Drawing.Point(12, 281);
         self.button2.Name := 'button2';
         self.button2.Size := new System.Drawing.Size(75, 23);
         self.button2.TabIndex := 3;
@@ -143,7 +147,7 @@ procedure InitializeComponent;
         self.groupBox1.Controls.Add(self.listBox1);
         self.groupBox1.Controls.Add(self.button4);
         self.groupBox1.Controls.Add(self.button5);
-        self.groupBox1.Location := new System.Drawing.Point(12, 69);
+        self.groupBox1.Location := new System.Drawing.Point(12, 68);
         self.groupBox1.Name := 'groupBox1';
         self.groupBox1.Size := new System.Drawing.Size(260, 151);
         self.groupBox1.TabIndex := 13;
@@ -157,9 +161,39 @@ procedure InitializeComponent;
         self.openFileDialog2.Title := 'Select a file to add';
         self.openFileDialog2.FileOk += openFileDialog2_FileOk;
         // 
+        // groupBox2
+        // 
+        self.groupBox2.Controls.Add(self.comboBox1);
+        self.groupBox2.Controls.Add(self.label3);
+        self.groupBox2.Location := new System.Drawing.Point(12, 225);
+        self.groupBox2.Name := 'groupBox2';
+        self.groupBox2.Size := new System.Drawing.Size(260, 50);
+        self.groupBox2.TabIndex := 14;
+        self.groupBox2.TabStop := false;
+        self.groupBox2.Text := 'Compression';
+        // 
+        // comboBox1
+        // 
+        self.comboBox1.DropDownStyle := System.Windows.Forms.ComboBoxStyle.DropDownList;
+        self.comboBox1.FormattingEnabled := true;
+        self.comboBox1.Items.AddRange(new System.Object[3]('None', 'Fast', 'Optimal'));
+        self.comboBox1.Location := new System.Drawing.Point(107, 19);
+        self.comboBox1.Name := 'comboBox1';
+        self.comboBox1.Size := new System.Drawing.Size(147, 21);
+        self.comboBox1.TabIndex := 7;
+        // 
+        // label3
+        // 
+        self.label3.Location := new System.Drawing.Point(6, 22);
+        self.label3.Name := 'label3';
+        self.label3.Size := new System.Drawing.Size(95, 13);
+        self.label3.TabIndex := 6;
+        self.label3.Text := 'Compression level:';
+        // 
         // AddFilesForm
         // 
-        self.ClientSize := new System.Drawing.Size(284, 261);
+        self.ClientSize := new System.Drawing.Size(284, 316);
+        self.Controls.Add(self.groupBox2);
         self.Controls.Add(self.groupBox1);
         self.Controls.Add(self.button3);
         self.Controls.Add(self.textBox1);
@@ -179,6 +213,7 @@ procedure InitializeComponent;
         self.panel1.ResumeLayout(false);
         (System.ComponentModel.ISupportInitialize(self.pictureBox1)).EndInit();
         self.groupBox1.ResumeLayout(false);
+        self.groupBox2.ResumeLayout(false);
         self.ResumeLayout(false);
         self.PerformLayout();
     end;

@@ -7,6 +7,9 @@ interface
 
 uses System, System.Drawing, System.Windows.Forms, System.ComponentModel;
 
+var
+  CompressLevel: System.IO.Compression.CompressionLevel;
+
 type
   AddFilesForm = class(Form)
     procedure button1_Click(sender: Object; e: EventArgs);
@@ -18,7 +21,7 @@ type
     procedure openFileDialog2_FileOk(sender: Object; e: CancelEventArgs);
     procedure button5_Click(sender: Object; e: EventArgs);
   {$region FormDesigner}
-  private 
+  private
     {$resource AddFiles.AddFilesForm.resources}
     panel1: Panel;
     label1: &Label;
@@ -33,6 +36,9 @@ type
     button5: Button;
     groupBox1: GroupBox;
     openFileDialog2: OpenFileDialog;
+    groupBox2: GroupBox;
+    comboBox1: ComboBox;
+    label3: &Label;
     pictureBox1: PictureBox;
     {$include AddFiles.AddFilesForm.inc}
   {$endregion FormDesigner}
@@ -47,6 +53,9 @@ implementation
 
 procedure AddFilesForm.button1_Click(sender: Object; e: EventArgs);
 begin
+  if(comboBox1.Text = 'None') then CompressLevel := System.IO.Compression.CompressionLevel.NoCompression;
+  if(comboBox1.Text = 'Fast') then CompressLevel := System.IO.Compression.CompressionLevel.Fastest;
+  if(comboBox1.Text = 'Optimal') then CompressLevel := System.IO.Compression.CompressionLevel.Optimal;
   
   Close;
 end;
@@ -58,7 +67,7 @@ end;
 
 procedure AddFilesForm.Form1_Load(sender: Object; e: EventArgs);
 begin
-  
+  comboBox1.Text := 'Fast';
 end;
 
 procedure AddFilesForm.button3_Click(sender: Object; e: EventArgs);

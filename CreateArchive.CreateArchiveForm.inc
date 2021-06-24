@@ -13,9 +13,15 @@ procedure InitializeComponent;
         self.textBox1 := new System.Windows.Forms.TextBox();
         self.button3 := new System.Windows.Forms.Button();
         self.saveFileDialog1 := new System.Windows.Forms.SaveFileDialog();
+        self.groupBox2 := new System.Windows.Forms.GroupBox();
+        self.listBox1 := new System.Windows.Forms.ListBox();
+        self.button4 := new System.Windows.Forms.Button();
+        self.button5 := new System.Windows.Forms.Button();
+        self.openFileDialog2 := new System.Windows.Forms.OpenFileDialog();
         self.panel1.SuspendLayout();
         (System.ComponentModel.ISupportInitialize(self.pictureBox1)).BeginInit();
         self.groupBox1.SuspendLayout();
+        self.groupBox2.SuspendLayout();
         self.SuspendLayout();
         // 
         // panel1
@@ -55,7 +61,7 @@ procedure InitializeComponent;
         // 
         // button1
         // 
-        self.button1.Location := new System.Drawing.Point(197, 136);
+        self.button1.Location := new System.Drawing.Point(197, 281);
         self.button1.Name := 'button1';
         self.button1.Size := new System.Drawing.Size(75, 23);
         self.button1.TabIndex := 1;
@@ -65,7 +71,7 @@ procedure InitializeComponent;
         // 
         // button2
         // 
-        self.button2.Location := new System.Drawing.Point(12, 136);
+        self.button2.Location := new System.Drawing.Point(12, 281);
         self.button2.Name := 'button2';
         self.button2.Size := new System.Drawing.Size(75, 23);
         self.button2.TabIndex := 2;
@@ -77,7 +83,7 @@ procedure InitializeComponent;
         // 
         self.groupBox1.Controls.Add(self.comboBox1);
         self.groupBox1.Controls.Add(self.label3);
-        self.groupBox1.Location := new System.Drawing.Point(12, 69);
+        self.groupBox1.Location := new System.Drawing.Point(12, 225);
         self.groupBox1.Name := 'groupBox1';
         self.groupBox1.Size := new System.Drawing.Size(260, 50);
         self.groupBox1.TabIndex := 4;
@@ -135,9 +141,59 @@ procedure InitializeComponent;
         self.saveFileDialog1.Title := 'Select where to create the archive';
         self.saveFileDialog1.FileOk += saveFileDialog1_FileOk;
         // 
+        // groupBox2
+        // 
+        self.groupBox2.Controls.Add(self.listBox1);
+        self.groupBox2.Controls.Add(self.button4);
+        self.groupBox2.Controls.Add(self.button5);
+        self.groupBox2.Location := new System.Drawing.Point(12, 68);
+        self.groupBox2.Name := 'groupBox2';
+        self.groupBox2.Size := new System.Drawing.Size(260, 151);
+        self.groupBox2.TabIndex := 14;
+        self.groupBox2.TabStop := false;
+        self.groupBox2.Text := 'Files';
+        // 
+        // listBox1
+        // 
+        self.listBox1.FormattingEnabled := true;
+        self.listBox1.HorizontalScrollbar := true;
+        self.listBox1.Location := new System.Drawing.Point(6, 19);
+        self.listBox1.Name := 'listBox1';
+        self.listBox1.ScrollAlwaysVisible := true;
+        self.listBox1.Size := new System.Drawing.Size(248, 95);
+        self.listBox1.TabIndex := 10;
+        // 
+        // button4
+        // 
+        self.button4.Location := new System.Drawing.Point(6, 120);
+        self.button4.Name := 'button4';
+        self.button4.Size := new System.Drawing.Size(75, 23);
+        self.button4.TabIndex := 11;
+        self.button4.Text := 'Add a file';
+        self.button4.UseVisualStyleBackColor := true;
+        self.button4.Click += button4_Click;
+        // 
+        // button5
+        // 
+        self.button5.Location := new System.Drawing.Point(179, 120);
+        self.button5.Name := 'button5';
+        self.button5.Size := new System.Drawing.Size(75, 23);
+        self.button5.TabIndex := 12;
+        self.button5.Text := 'Remove';
+        self.button5.UseVisualStyleBackColor := true;
+        self.button5.Click += button5_Click;
+        // 
+        // openFileDialog2
+        // 
+        self.openFileDialog2.FileName := 'File';
+        self.openFileDialog2.Filter := 'All files|*.*';
+        self.openFileDialog2.Title := 'Select a file to add';
+        self.openFileDialog2.FileOk += openFileDialog2_FileOk;
+        // 
         // CreateArchiveForm
         // 
-        self.ClientSize := new System.Drawing.Size(284, 171);
+        self.ClientSize := new System.Drawing.Size(284, 316);
+        self.Controls.Add(self.groupBox2);
         self.Controls.Add(self.button3);
         self.Controls.Add(self.textBox1);
         self.Controls.Add(self.label2);
@@ -157,6 +213,7 @@ procedure InitializeComponent;
         self.panel1.ResumeLayout(false);
         (System.ComponentModel.ISupportInitialize(self.pictureBox1)).EndInit();
         self.groupBox1.ResumeLayout(false);
+        self.groupBox2.ResumeLayout(false);
         self.ResumeLayout(false);
         self.PerformLayout();
     end;

@@ -113,7 +113,7 @@ procedure InitializeComponent;
         // 
         // button2
         // 
-        self.button2.Location := new System.Drawing.Point(197, 111);
+        self.button2.Location := new System.Drawing.Point(197, 106);
         self.button2.Name := 'button2';
         self.button2.Size := new System.Drawing.Size(75, 23);
         self.button2.TabIndex := 16;
@@ -123,7 +123,7 @@ procedure InitializeComponent;
         // 
         // button4
         // 
-        self.button4.Location := new System.Drawing.Point(12, 111);
+        self.button4.Location := new System.Drawing.Point(12, 106);
         self.button4.Name := 'button4';
         self.button4.Size := new System.Drawing.Size(75, 23);
         self.button4.TabIndex := 17;
@@ -137,7 +137,7 @@ procedure InitializeComponent;
         // 
         // UnpackForm
         // 
-        self.ClientSize := new System.Drawing.Size(284, 146);
+        self.ClientSize := new System.Drawing.Size(284, 141);
         self.Controls.Add(self.button4);
         self.Controls.Add(self.button2);
         self.Controls.Add(self.button1);
