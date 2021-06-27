@@ -80,9 +80,9 @@ procedure InitializeComponent;
         // 
         // openFileDialog1
         // 
-        self.openFileDialog1.DefaultExt := 'zip';
+        self.openFileDialog1.DefaultExt := '7z';
         self.openFileDialog1.FileName := 'Archive';
-        self.openFileDialog1.Filter := 'ZIP folder|*.zip';
+        self.openFileDialog1.Filter := '7-Zip archive|*.7z';
         self.openFileDialog1.Title := 'Select what archive to unpack';
         self.openFileDialog1.FileOk += openFileDialog1_FileOk;
         // 

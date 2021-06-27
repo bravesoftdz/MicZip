@@ -6,8 +6,6 @@ procedure InitializeComponent;
         self.createAnArchiveToolStripMenuItem := new System.Windows.Forms.ToolStripMenuItem();
         self.addFilesToolStripMenuItem := new System.Windows.Forms.ToolStripMenuItem();
         self.unpackToolStripMenuItem := new System.Windows.Forms.ToolStripMenuItem();
-        self.toolStripSeparator1 := new System.Windows.Forms.ToolStripSeparator();
-        self.settingsToolStripMenuItem := new System.Windows.Forms.ToolStripMenuItem();
         self.aboutToolStripMenuItem := new System.Windows.Forms.ToolStripMenuItem();
         self.panel1 := new System.Windows.Forms.Panel();
         self.groupBox1 := new System.Windows.Forms.GroupBox();
@@ -15,15 +13,9 @@ procedure InitializeComponent;
         self.pictureBox4 := new System.Windows.Forms.PictureBox();
         self.linkLabel3 := new System.Windows.Forms.LinkLabel();
         self.pictureBox3 := new System.Windows.Forms.PictureBox();
-        self.linkLabel1 := new System.Windows.Forms.LinkLabel();
-        self.pictureBox2 := new System.Windows.Forms.PictureBox();
         self.linkLabel2 := new System.Windows.Forms.LinkLabel();
         self.pictureBox1 := new System.Windows.Forms.PictureBox();
         self.panel2 := new System.Windows.Forms.Panel();
-        self.groupBox3 := new System.Windows.Forms.GroupBox();
-        self.button2 := new System.Windows.Forms.Button();
-        self.radioButton4 := new System.Windows.Forms.RadioButton();
-        self.pictureBox8 := new System.Windows.Forms.PictureBox();
         self.groupBox2 := new System.Windows.Forms.GroupBox();
         self.button1 := new System.Windows.Forms.Button();
         self.radioButton3 := new System.Windows.Forms.RadioButton();
@@ -38,11 +30,8 @@ procedure InitializeComponent;
         self.groupBox1.SuspendLayout();
         (System.ComponentModel.ISupportInitialize(self.pictureBox4)).BeginInit();
         (System.ComponentModel.ISupportInitialize(self.pictureBox3)).BeginInit();
-        (System.ComponentModel.ISupportInitialize(self.pictureBox2)).BeginInit();
         (System.ComponentModel.ISupportInitialize(self.pictureBox1)).BeginInit();
         self.panel2.SuspendLayout();
-        self.groupBox3.SuspendLayout();
-        (System.ComponentModel.ISupportInitialize(self.pictureBox8)).BeginInit();
         self.groupBox2.SuspendLayout();
         (System.ComponentModel.ISupportInitialize(self.pictureBox7)).BeginInit();
         (System.ComponentModel.ISupportInitialize(self.pictureBox6)).BeginInit();
@@ -62,7 +51,7 @@ procedure InitializeComponent;
         // 
         // micZipToolStripMenuItem
         // 
-        self.micZipToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[5](self.createAnArchiveToolStripMenuItem, self.addFilesToolStripMenuItem, self.unpackToolStripMenuItem, self.toolStripSeparator1, self.settingsToolStripMenuItem));
+        self.micZipToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[3](self.createAnArchiveToolStripMenuItem, self.addFilesToolStripMenuItem, self.unpackToolStripMenuItem));
         self.micZipToolStripMenuItem.ForeColor := System.Drawing.Color.White;
         self.micZipToolStripMenuItem.Image := (System.Drawing.Image(resources.GetObject('micZipToolStripMenuItem.Image')));
         self.micZipToolStripMenuItem.Name := 'micZipToolStripMenuItem';
@@ -93,18 +82,6 @@ procedure InitializeComponent;
         self.unpackToolStripMenuItem.Text := 'Unpack';
         self.unpackToolStripMenuItem.Click += unpackToolStripMenuItem_Click;
         // 
-        // toolStripSeparator1
-        // 
-        self.toolStripSeparator1.Name := 'toolStripSeparator1';
-        self.toolStripSeparator1.Size := new System.Drawing.Size(162, 6);
-        // 
-        // settingsToolStripMenuItem
-        // 
-        self.settingsToolStripMenuItem.Image := (System.Drawing.Image(resources.GetObject('settingsToolStripMenuItem.Image')));
-        self.settingsToolStripMenuItem.Name := 'settingsToolStripMenuItem';
-        self.settingsToolStripMenuItem.Size := new System.Drawing.Size(165, 22);
-        self.settingsToolStripMenuItem.Text := 'Settings';
-        // 
         // aboutToolStripMenuItem
         // 
         self.aboutToolStripMenuItem.ForeColor := System.Drawing.Color.White;
@@ -132,8 +109,6 @@ procedure InitializeComponent;
         self.groupBox1.Controls.Add(self.pictureBox4);
         self.groupBox1.Controls.Add(self.linkLabel3);
         self.groupBox1.Controls.Add(self.pictureBox3);
-        self.groupBox1.Controls.Add(self.linkLabel1);
-        self.groupBox1.Controls.Add(self.pictureBox2);
         self.groupBox1.Controls.Add(self.linkLabel2);
         self.groupBox1.Controls.Add(self.pictureBox1);
         self.groupBox1.ForeColor := System.Drawing.Color.White;
@@ -186,26 +161,6 @@ procedure InitializeComponent;
         self.pictureBox3.TabIndex := 6;
         self.pictureBox3.TabStop := false;
         // 
-        // linkLabel1
-        // 
-        self.linkLabel1.LinkColor := System.Drawing.Color.FromArgb((System.Int32((System.Byte(5)))), (System.Int32((System.Byte(195)))), (System.Int32((System.Byte(255)))));
-        self.linkLabel1.Location := new System.Drawing.Point(24, 78);
-        self.linkLabel1.Name := 'linkLabel1';
-        self.linkLabel1.Size := new System.Drawing.Size(94, 16);
-        self.linkLabel1.TabIndex := 2;
-        self.linkLabel1.TabStop := true;
-        self.linkLabel1.Text := 'Settings';
-        self.linkLabel1.TextAlign := System.Drawing.ContentAlignment.MiddleLeft;
-        // 
-        // pictureBox2
-        // 
-        self.pictureBox2.Image := (System.Drawing.Image(resources.GetObject('pictureBox2.Image')));
-        self.pictureBox2.Location := new System.Drawing.Point(6, 78);
-        self.pictureBox2.Name := 'pictureBox2';
-        self.pictureBox2.Size := new System.Drawing.Size(16, 16);
-        self.pictureBox2.TabIndex := 4;
-        self.pictureBox2.TabStop := false;
-        // 
         // linkLabel2
         // 
         self.linkLabel2.LinkColor := System.Drawing.Color.FromArgb((System.Int32((System.Byte(5)))), (System.Int32((System.Byte(195)))), (System.Int32((System.Byte(255)))));
@@ -230,7 +185,6 @@ procedure InitializeComponent;
         // panel2
         // 
         self.panel2.AutoScroll := true;
-        self.panel2.Controls.Add(self.groupBox3);
         self.panel2.Controls.Add(self.groupBox2);
         self.panel2.Controls.Add(self.label1);
         self.panel2.Dock := System.Windows.Forms.DockStyle.Fill;
@@ -238,49 +192,6 @@ procedure InitializeComponent;
         self.panel2.Name := 'panel2';
         self.panel2.Size := new System.Drawing.Size(304, 287);
         self.panel2.TabIndex := 2;
-        // 
-        // groupBox3
-        // 
-        self.groupBox3.Controls.Add(self.button2);
-        self.groupBox3.Controls.Add(self.radioButton4);
-        self.groupBox3.Controls.Add(self.pictureBox8);
-        self.groupBox3.Location := new System.Drawing.Point(6, 213);
-        self.groupBox3.Name := 'groupBox3';
-        self.groupBox3.Size := new System.Drawing.Size(274, 97);
-        self.groupBox3.TabIndex := 10;
-        self.groupBox3.TabStop := false;
-        self.groupBox3.Text := 'Other';
-        // 
-        // button2
-        // 
-        self.button2.Location := new System.Drawing.Point(193, 68);
-        self.button2.Name := 'button2';
-        self.button2.Size := new System.Drawing.Size(75, 23);
-        self.button2.TabIndex := 10;
-        self.button2.Text := 'Do';
-        self.button2.UseVisualStyleBackColor := true;
-        self.button2.Click += button2_Click;
-        // 
-        // radioButton4
-        // 
-        self.radioButton4.Checked := true;
-        self.radioButton4.Location := new System.Drawing.Point(54, 28);
-        self.radioButton4.Name := 'radioButton4';
-        self.radioButton4.Size := new System.Drawing.Size(214, 24);
-        self.radioButton4.TabIndex := 10;
-        self.radioButton4.TabStop := true;
-        self.radioButton4.Text := 'Open settings';
-        self.radioButton4.UseVisualStyleBackColor := true;
-        // 
-        // pictureBox8
-        // 
-        self.pictureBox8.Image := (System.Drawing.Image(resources.GetObject('pictureBox8.Image')));
-        self.pictureBox8.Location := new System.Drawing.Point(6, 19);
-        self.pictureBox8.Name := 'pictureBox8';
-        self.pictureBox8.Size := new System.Drawing.Size(42, 42);
-        self.pictureBox8.SizeMode := System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-        self.pictureBox8.TabIndex := 11;
-        self.pictureBox8.TabStop := false;
         // 
         // groupBox2
         // 
@@ -293,14 +204,14 @@ procedure InitializeComponent;
         self.groupBox2.Controls.Add(self.pictureBox5);
         self.groupBox2.Location := new System.Drawing.Point(6, 6);
         self.groupBox2.Name := 'groupBox2';
-        self.groupBox2.Size := new System.Drawing.Size(274, 201);
+        self.groupBox2.Size := new System.Drawing.Size(292, 201);
         self.groupBox2.TabIndex := 9;
         self.groupBox2.TabStop := false;
         self.groupBox2.Text := 'MicZip';
         // 
         // button1
         // 
-        self.button1.Location := new System.Drawing.Point(193, 172);
+        self.button1.Location := new System.Drawing.Point(211, 172);
         self.button1.Name := 'button1';
         self.button1.Size := new System.Drawing.Size(75, 23);
         self.button1.TabIndex := 9;
@@ -371,9 +282,9 @@ procedure InitializeComponent;
         // 
         self.label1.Dock := System.Windows.Forms.DockStyle.Bottom;
         self.label1.Font := new System.Drawing.Font('Microsoft Sans Serif', 6.75, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte(204)));
-        self.label1.Location := new System.Drawing.Point(0, 310);
+        self.label1.Location := new System.Drawing.Point(0, 275);
         self.label1.Name := 'label1';
-        self.label1.Size := new System.Drawing.Size(287, 12);
+        self.label1.Size := new System.Drawing.Size(304, 12);
         self.label1.TabIndex := 8;
         self.label1.Text := 'OS Version on Machine Name';
         self.label1.TextAlign := System.Drawing.ContentAlignment.BottomRight;
@@ -398,11 +309,8 @@ procedure InitializeComponent;
         self.groupBox1.ResumeLayout(false);
         (System.ComponentModel.ISupportInitialize(self.pictureBox4)).EndInit();
         (System.ComponentModel.ISupportInitialize(self.pictureBox3)).EndInit();
-        (System.ComponentModel.ISupportInitialize(self.pictureBox2)).EndInit();
         (System.ComponentModel.ISupportInitialize(self.pictureBox1)).EndInit();
         self.panel2.ResumeLayout(false);
-        self.groupBox3.ResumeLayout(false);
-        (System.ComponentModel.ISupportInitialize(self.pictureBox8)).EndInit();
         self.groupBox2.ResumeLayout(false);
         (System.ComponentModel.ISupportInitialize(self.pictureBox7)).EndInit();
         (System.ComponentModel.ISupportInitialize(self.pictureBox6)).EndInit();

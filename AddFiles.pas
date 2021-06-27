@@ -2,13 +2,7 @@
 
 interface
 
-{$reference 'System.IO.Packaging.dll'}
-{$reference 'System.IO.FileSystem.Primitives.dll'}
-
 uses System, System.Drawing, System.Windows.Forms, System.ComponentModel;
-
-var
-  CompressLevel: System.IO.Compression.CompressionLevel;
 
 type
   AddFilesForm = class(Form)
@@ -36,9 +30,6 @@ type
     button5: Button;
     groupBox1: GroupBox;
     openFileDialog2: OpenFileDialog;
-    groupBox2: GroupBox;
-    comboBox1: ComboBox;
-    label3: &Label;
     pictureBox1: PictureBox;
     {$include AddFiles.AddFilesForm.inc}
   {$endregion FormDesigner}
@@ -53,10 +44,11 @@ implementation
 
 procedure AddFilesForm.button1_Click(sender: Object; e: EventArgs);
 begin
-  if(comboBox1.Text = 'None') then CompressLevel := System.IO.Compression.CompressionLevel.NoCompression;
-  if(comboBox1.Text = 'Fast') then CompressLevel := System.IO.Compression.CompressionLevel.Fastest;
-  if(comboBox1.Text = 'Optimal') then CompressLevel := System.IO.Compression.CompressionLevel.Optimal;
-  
+  var i: integer;
+  var AllItems: string;
+  for i := 0 to listBox1.Items.Count - 1 do
+    AllItems := AllItems + ' "' + listBox1.Items[i].ToString + '"';
+  exec('7zr.exe', 'a -y "' + textBox1.Text + '" ' + AllItems);
   Close;
 end;
 
@@ -67,7 +59,7 @@ end;
 
 procedure AddFilesForm.Form1_Load(sender: Object; e: EventArgs);
 begin
-  comboBox1.Text := 'Fast';
+  
 end;
 
 procedure AddFilesForm.button3_Click(sender: Object; e: EventArgs);

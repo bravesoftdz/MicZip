@@ -2,13 +2,7 @@
 
 interface
 
-{$reference 'System.IO.Packaging.dll'}
-{$reference 'System.IO.FileSystem.Primitives.dll'}
-
 uses System, System.Drawing, System.Windows.Forms, System.ComponentModel;
-
-var
-  CompressLevel: System.IO.Compression.CompressionLevel;
 
 type
   CreateArchiveForm = class(Form)
@@ -27,13 +21,10 @@ type
     label1: &Label;
     button1: Button;
     button2: Button;
-    groupBox1: GroupBox;
     label2: &Label;
     textBox1: TextBox;
     button3: Button;
     saveFileDialog1: SaveFileDialog;
-    comboBox1: ComboBox;
-    label3: &Label;
     groupBox2: GroupBox;
     listBox1: ListBox;
     button4: Button;
@@ -63,10 +54,11 @@ end;
 
 procedure CreateArchiveForm.button1_Click(sender: Object; e: EventArgs);
 begin
-  if(comboBox1.Text = 'None') then CompressLevel := System.IO.Compression.CompressionLevel.NoCompression;
-  if(comboBox1.Text = 'Fast') then CompressLevel := System.IO.Compression.CompressionLevel.Fastest;
-  if(comboBox1.Text = 'Optimal') then CompressLevel := System.IO.Compression.CompressionLevel.Optimal;
-  var Archive := new System.IO.Compression.DeflateStream(System.IO.File.OpenWrite(textBox1.Text), CompressLevel, true);
+  var i: integer;
+  var AllItems: string;
+  for i := 0 to listBox1.Items.Count - 1 do
+    AllItems := AllItems + ' "' + listBox1.Items[i].ToString + '"';
+  exec('7zr.exe', 'a -y "' + textBox1.Text + '" ' + AllItems);
   Close;
 end;
 
@@ -77,7 +69,7 @@ end;
 
 procedure CreateArchiveForm.CreateArchiveForm_Load(sender: Object; e: EventArgs);
 begin
-  comboBox1.Text := 'Fast';
+  
 end;
 
 procedure CreateArchiveForm.button5_Click(sender: Object; e: EventArgs);

@@ -27,8 +27,6 @@ type
     pictureBox1: PictureBox;
     createAnArchiveToolStripMenuItem: ToolStripMenuItem;
     panel2: Panel;
-    toolStripSeparator1: ToolStripSeparator;
-    settingsToolStripMenuItem: ToolStripMenuItem;
     label1: &Label;
     linkLabel4: LinkLabel;
     pictureBox4: PictureBox;
@@ -44,12 +42,6 @@ type
     radioButton1: RadioButton;
     pictureBox5: PictureBox;
     button1: Button;
-    groupBox3: GroupBox;
-    radioButton4: RadioButton;
-    pictureBox8: PictureBox;
-    button2: Button;
-    linkLabel1: LinkLabel;
-    pictureBox2: PictureBox;
     panel1: Panel;
     {$include Unit1.Form1.inc}
   {$endregion FormDesigner}

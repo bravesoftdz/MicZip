@@ -2,9 +2,6 @@
 
 interface
 
-{$reference 'System.IO.Packaging.dll'}
-{$reference 'System.IO.FileSystem.Primitives.dll'}
-
 uses System, System.Drawing, System.Windows.Forms, System.ComponentModel;
 
 type
@@ -53,7 +50,7 @@ end;
 
 procedure UnpackForm.button2_Click(sender: Object; e: EventArgs);
 begin
-  
+  exec('7zr.exe', 'x -y "' + textBox1.Text + '" -o"' + textBox2.Text + '"');
   Close;
 end;
 

@@ -2,7 +2,7 @@ procedure InitializeComponent;
     begin
         var resources: System.ComponentModel.ComponentResourceManager := new System.ComponentModel.ComponentResourceManager(typeof(AboutMicZip));
         var listViewGroup11: System.Windows.Forms.ListViewGroup := new System.Windows.Forms.ListViewGroup('ListViewGroup', System.Windows.Forms.HorizontalAlignment.Left);
-        var listViewItem11: System.Windows.Forms.ListViewItem := new System.Windows.Forms.ListViewItem('Zip');
+        var listViewItem11: System.Windows.Forms.ListViewItem := new System.Windows.Forms.ListViewItem('7-Zip (7z)');
         self.pictureBox1 := new System.Windows.Forms.PictureBox();
         self.linkLabel1 := new System.Windows.Forms.LinkLabel();
         self.tabControl1 := new System.Windows.Forms.TabControl();
@@ -30,16 +30,16 @@ procedure InitializeComponent;
         // linkLabel1
         // 
         self.linkLabel1.BackColor := System.Drawing.Color.Transparent;
-        self.linkLabel1.Font := new System.Drawing.Font('Lato', 8.25, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte(0)));
+        self.linkLabel1.Font := new System.Drawing.Font('Lato', 9.749999, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (System.Byte(0)));
         self.linkLabel1.ForeColor := System.Drawing.Color.FromArgb((System.Int32((System.Byte(5)))), (System.Int32((System.Byte(155)))), (System.Int32((System.Byte(255)))));
-        self.linkLabel1.LinkArea := new System.Windows.Forms.LinkArea(28, 15);
+        self.linkLabel1.LinkArea := new System.Windows.Forms.LinkArea(26, 15);
         self.linkLabel1.LinkColor := System.Drawing.Color.FromArgb((System.Int32((System.Byte(5)))), (System.Int32((System.Byte(195)))), (System.Int32((System.Byte(255)))));
         self.linkLabel1.Location := new System.Drawing.Point(82, 12);
         self.linkLabel1.Name := 'linkLabel1';
         self.linkLabel1.Size := new System.Drawing.Size(190, 67);
         self.linkLabel1.TabIndex := 1;
         self.linkLabel1.TabStop := true;
-        self.linkLabel1.Text := 'MicZip'#13#10'Version Indev'#13#10#13#10'By Michael Agarkov'#13#10'Copyright © 2021 Michael Agarkov';
+        self.linkLabel1.Text := 'MicZip'#13#10'Version 1.0'#13#10#13#10'By Michael Agarkov';
         self.linkLabel1.UseCompatibleTextRendering := true;
         self.linkLabel1.LinkClicked += linkLabel1_LinkClicked;
         // 
