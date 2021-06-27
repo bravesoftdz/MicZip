@@ -16,6 +16,8 @@ type
     richTextBox1: RichTextBox;
     tabPage2: TabPage;
     listView1: ListView;
+    tabPage3: TabPage;
+    richTextBox2: RichTextBox;
     pictureBox1: PictureBox;
     {$include About.AboutMicZip.inc}
   {$endregion FormDesigner}

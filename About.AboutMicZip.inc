@@ -10,10 +10,13 @@ procedure InitializeComponent;
         self.richTextBox1 := new System.Windows.Forms.RichTextBox();
         self.tabPage2 := new System.Windows.Forms.TabPage();
         self.listView1 := new System.Windows.Forms.ListView();
+        self.tabPage3 := new System.Windows.Forms.TabPage();
+        self.richTextBox2 := new System.Windows.Forms.RichTextBox();
         (System.ComponentModel.ISupportInitialize(self.pictureBox1)).BeginInit();
         self.tabControl1.SuspendLayout();
         self.tabPage1.SuspendLayout();
         self.tabPage2.SuspendLayout();
+        self.tabPage3.SuspendLayout();
         self.SuspendLayout();
         // 
         // pictureBox1
@@ -47,6 +50,7 @@ procedure InitializeComponent;
         // 
         self.tabControl1.Controls.Add(self.tabPage1);
         self.tabControl1.Controls.Add(self.tabPage2);
+        self.tabControl1.Controls.Add(self.tabPage3);
         self.tabControl1.Location := new System.Drawing.Point(12, 82);
         self.tabControl1.Name := 'tabControl1';
         self.tabControl1.SelectedIndex := 0;
@@ -105,6 +109,27 @@ procedure InitializeComponent;
         self.listView1.UseCompatibleStateImageBehavior := false;
         self.listView1.View := System.Windows.Forms.View.Tile;
         // 
+        // tabPage3
+        // 
+        self.tabPage3.Controls.Add(self.richTextBox2);
+        self.tabPage3.Location := new System.Drawing.Point(4, 22);
+        self.tabPage3.Name := 'tabPage3';
+        self.tabPage3.Padding := new System.Windows.Forms.Padding(3);
+        self.tabPage3.Size := new System.Drawing.Size(252, 141);
+        self.tabPage3.TabIndex := 2;
+        self.tabPage3.Text := 'Information';
+        self.tabPage3.UseVisualStyleBackColor := true;
+        // 
+        // richTextBox2
+        // 
+        self.richTextBox2.Dock := System.Windows.Forms.DockStyle.Fill;
+        self.richTextBox2.Location := new System.Drawing.Point(3, 3);
+        self.richTextBox2.Name := 'richTextBox2';
+        self.richTextBox2.ReadOnly := true;
+        self.richTextBox2.Size := new System.Drawing.Size(246, 135);
+        self.richTextBox2.TabIndex := 1;
+        self.richTextBox2.Text := resources.GetString('richTextBox2.Text');
+        // 
         // AboutMicZip
         // 
         self.BackgroundImage := (System.Drawing.Image(resources.GetObject('$this.BackgroundImage')));
@@ -125,5 +150,6 @@ procedure InitializeComponent;
         self.tabControl1.ResumeLayout(false);
         self.tabPage1.ResumeLayout(false);
         self.tabPage2.ResumeLayout(false);
+        self.tabPage3.ResumeLayout(false);
         self.ResumeLayout(false);
     end;
