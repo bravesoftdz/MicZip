@@ -15,6 +15,7 @@ procedure InitializeComponent;
         self.button5 := new System.Windows.Forms.Button();
         self.groupBox1 := new System.Windows.Forms.GroupBox();
         self.openFileDialog2 := new System.Windows.Forms.OpenFileDialog();
+        self.label3 := new System.Windows.Forms.Label();
         self.panel1.SuspendLayout();
         (System.ComponentModel.ISupportInitialize(self.pictureBox1)).BeginInit();
         self.groupBox1.SuspendLayout();
@@ -57,6 +58,7 @@ procedure InitializeComponent;
         // 
         // button1
         // 
+        self.button1.Enabled := false;
         self.button1.Location := new System.Drawing.Point(197, 226);
         self.button1.Name := 'button1';
         self.button1.Size := new System.Drawing.Size(75, 23);
@@ -91,6 +93,7 @@ procedure InitializeComponent;
         self.textBox1.Name := 'textBox1';
         self.textBox1.Size := new System.Drawing.Size(178, 20);
         self.textBox1.TabIndex := 9;
+        self.textBox1.TextChanged += textBox1_TextChanged;
         // 
         // label2
         // 
@@ -157,9 +160,21 @@ procedure InitializeComponent;
         self.openFileDialog2.Title := 'Select a file to add';
         self.openFileDialog2.FileOk += openFileDialog2_FileOk;
         // 
+        // label3
+        // 
+        self.label3.ForeColor := System.Drawing.Color.Red;
+        self.label3.Location := new System.Drawing.Point(93, 226);
+        self.label3.Name := 'label3';
+        self.label3.Size := new System.Drawing.Size(103, 23);
+        self.label3.TabIndex := 16;
+        self.label3.Text := 'Please add files';
+        self.label3.TextAlign := System.Drawing.ContentAlignment.MiddleRight;
+        self.label3.Visible := false;
+        // 
         // AddFilesForm
         // 
         self.ClientSize := new System.Drawing.Size(284, 261);
+        self.Controls.Add(self.label3);
         self.Controls.Add(self.groupBox1);
         self.Controls.Add(self.button3);
         self.Controls.Add(self.textBox1);

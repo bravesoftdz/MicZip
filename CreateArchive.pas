@@ -14,6 +14,7 @@ type
     procedure button5_Click(sender: Object; e: EventArgs);
     procedure button4_Click(sender: Object; e: EventArgs);
     procedure openFileDialog2_FileOk(sender: Object; e: CancelEventArgs);
+    procedure textBox1_TextChanged(sender: Object; e: EventArgs);
   {$region FormDesigner}
   private
     {$resource CreateArchive.CreateArchiveForm.resources}
@@ -30,6 +31,7 @@ type
     button4: Button;
     button5: Button;
     openFileDialog2: OpenFileDialog;
+    label3: &Label;
     panel1: Panel;
     {$include CreateArchive.CreateArchiveForm.inc}
   {$endregion FormDesigner}
@@ -54,12 +56,21 @@ end;
 
 procedure CreateArchiveForm.button1_Click(sender: Object; e: EventArgs);
 begin
-  var i: integer;
-  var AllItems: string;
-  for i := 0 to listBox1.Items.Count - 1 do
-    AllItems := AllItems + ' "' + listBox1.Items[i].ToString + '"';
-  exec('7zr.exe', 'a -y "' + textBox1.Text + '" ' + AllItems);
-  Close;
+  if(listBox1.Items.Count <> 0) then
+  begin
+    label3.Visible := false;
+    textBox1.Enabled := false;
+    button1.Enabled := false;
+    button3.Enabled := false;
+    button4.Enabled := false;
+    button5.Enabled := false;
+    var i: integer;
+    var AllItems: string;
+    for i := 0 to listBox1.Items.Count - 1 do
+      AllItems := AllItems + ' "' + listBox1.Items[i].ToString + '"';
+    exec('7zr.exe', 'a -y "' + textBox1.Text + '" ' + AllItems);
+    Close;
+  end else label3.Visible := true;
 end;
 
 procedure CreateArchiveForm.button2_Click(sender: Object; e: EventArgs);
@@ -85,6 +96,11 @@ end;
 procedure CreateArchiveForm.openFileDialog2_FileOk(sender: Object; e: CancelEventArgs);
 begin
   if(listBox1.Items.Contains(openFileDialog2.FileName) = false) then listBox1.Items.Add(openFileDialog2.FileName);
+end;
+
+procedure CreateArchiveForm.textBox1_TextChanged(sender: Object; e: EventArgs);
+begin
+  if(textBox1.Text <> '') then button1.Enabled := true else button1.Enabled := false;
 end;
 
 end.

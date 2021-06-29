@@ -42,7 +42,7 @@ procedure InitializeComponent;
         self.linkLabel1.Size := new System.Drawing.Size(190, 67);
         self.linkLabel1.TabIndex := 1;
         self.linkLabel1.TabStop := true;
-        self.linkLabel1.Text := 'MicZip'#13#10'Version 1.0'#13#10#13#10'By Michael Agarkov';
+        self.linkLabel1.Text := 'MicZip'#13#10'Version 1.1'#13#10#13#10'By Michael Agarkov';
         self.linkLabel1.UseCompatibleTextRendering := true;
         self.linkLabel1.LinkClicked += linkLabel1_LinkClicked;
         // 

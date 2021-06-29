@@ -69,6 +69,7 @@ procedure InitializeComponent;
         self.textBox1.Name := 'textBox1';
         self.textBox1.Size := new System.Drawing.Size(178, 20);
         self.textBox1.TabIndex := 12;
+        self.textBox1.TextChanged += textBox1_TextChanged;
         // 
         // label2
         // 
@@ -102,6 +103,7 @@ procedure InitializeComponent;
         self.textBox2.Name := 'textBox2';
         self.textBox2.Size := new System.Drawing.Size(192, 20);
         self.textBox2.TabIndex := 15;
+        self.textBox2.TextChanged += textBox2_TextChanged;
         // 
         // label3
         // 
@@ -113,6 +115,7 @@ procedure InitializeComponent;
         // 
         // button2
         // 
+        self.button2.Enabled := false;
         self.button2.Location := new System.Drawing.Point(197, 106);
         self.button2.Name := 'button2';
         self.button2.Size := new System.Drawing.Size(75, 23);
