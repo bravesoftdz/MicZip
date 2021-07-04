@@ -68,7 +68,7 @@ begin
     var AllItems: string;
     for i := 0 to listBox1.Items.Count - 1 do
       AllItems := AllItems + ' "' + listBox1.Items[i].ToString + '"';
-    exec('7zr.exe', 'a -y "' + textBox1.Text + '" ' + AllItems);
+    if(textBox1.Text.EndsWith('.7z')) then exec('7zr.exe', 'a -y "' + textBox1.Text + '" ' + AllItems);
     Close;
   end else label3.Visible := true;
 end;

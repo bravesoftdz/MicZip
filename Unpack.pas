@@ -56,7 +56,8 @@ begin
   textBox2.Enabled := false;
   button3.Enabled := false;
   button1.Enabled := false;
-  exec('7zr.exe', 'x -y "' + textBox1.Text + '" -o"' + textBox2.Text + '"');
+  if(textBox1.Text.EndsWith('.rar')) then exec('UnRAR.exe', 'x -y "' + textBox1.Text + '" "' + textBox2.Text + '"');
+  if(textBox1.Text.EndsWith('.7z')) then exec('7zr.exe', 'x -y "' + textBox1.Text + '" -o"' + textBox2.Text + '"');
   Close;
 end;
 
