@@ -6,9 +6,9 @@ Main window
 
 ![Screenshot_1](https://user-images.githubusercontent.com/81249219/123561810-4dd73780-d7b3-11eb-9341-4548a7869cda.png)
 
-Creating an archive
+Adding files
 
-![Screenshot_2](https://user-images.githubusercontent.com/81249219/123561821-53348200-d7b3-11eb-9b9b-077b8f11810f.png)
+![Screenshot_2](https://user-images.githubusercontent.com/81249219/127415647-5fb10cc8-76fc-4be1-89eb-88c6ad1e6e1f.png)
 
 You can read the [wiki](https://github.com/MichaelAgarkov/MicZip/wiki) to find more info about this project.
 
