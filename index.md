@@ -26,7 +26,7 @@ I recommend using [PascalABC.NET version 3.4.2 build 2050](https://archive.org/d
 
 You can [add more file formats to MicZip](https://github.com/MichaelAgarkov/MicZip/wiki/Modifying) since it's open-source!
 
-## MicSetup License
+## MicZip License
 MicZip is published under the [**BSD 4-Clause License**](https://github.com/MichaelAgarkov/MicZip/blob/main/License.txt) for your freedom to make [your own versions of it](https://github.com/MichaelAgarkov/MicZip/wiki/Modifying) and add support for the file formats you want (including your own ones).
 
 ---
