@@ -2,11 +2,11 @@
 
 MicZip is a very compact file compression/archiver, made in PascalABC.NET by [Michael Agarkov](https://github.com/MichaelAgarkov).
 
-Main window
+Main window:
 
 ![Screenshot_1](https://user-images.githubusercontent.com/81249219/123561810-4dd73780-d7b3-11eb-9341-4548a7869cda.png)
 
-Adding files
+Adding files:
 
 ![Screenshot_2](https://user-images.githubusercontent.com/81249219/127415647-5fb10cc8-76fc-4be1-89eb-88c6ad1e6e1f.png)
 
