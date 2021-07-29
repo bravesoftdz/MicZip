@@ -30,6 +30,4 @@ You can [add more file formats to MicZip](https://github.com/MichaelAgarkov/MicZ
 MicZip is published under the [**BSD 4-Clause License**](https://github.com/MichaelAgarkov/MicZip/blob/main/License.txt) for your freedom to make [your own versions of it](https://github.com/MichaelAgarkov/MicZip/wiki/Modifying) and add support for the file formats you want (including your own ones).
 
 ---
-Copyright (c) 2021, Michael Agarkov
-
-All rights reserved.
+Copyright (c) 2021, [Michael Agarkov](https://github.com/MichaelAgarkov)
