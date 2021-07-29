@@ -1,37 +1,35 @@
-## Welcome to GitHub Pages
+# MicZip - A compact file compression program
 
-You can use the [editor on GitHub](https://github.com/MichaelAgarkov/MicZip/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+MicZip is a very compact file compression/archiver, made in PascalABC.NET by [Michael Agarkov](https://github.com/MichaelAgarkov).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Main window
 
-### Markdown
+![Screenshot_1](https://user-images.githubusercontent.com/81249219/123561810-4dd73780-d7b3-11eb-9341-4548a7869cda.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Creating an archive
 
-```markdown
-Syntax highlighted code block
+![Screenshot_2](https://user-images.githubusercontent.com/81249219/123561821-53348200-d7b3-11eb-9b9b-077b8f11810f.png)
 
-# Header 1
-## Header 2
-### Header 3
+You can read the [wiki](https://github.com/MichaelAgarkov/MicZip/wiki) to find more info about this project.
 
-- Bulleted
-- List
+## Download MicZip
 
-1. Numbered
-2. List
+- [Releases](https://github.com/MichaelAgarkov/MicZip/releases)
+- [Source code](https://github.com/MichaelAgarkov/MicZip)
 
-**Bold** and _Italic_ and `Code` text
+### Compiler for the source code
+I recommend using [PascalABC.NET version 3.4.2 build 2050](https://archive.org/download/pascalabc.net/PascalABCNETWithDotNetSetup.exe) because it's the version MicZip is compiled in.
 
-[Link](url) and ![Image](src)
-```
+## Supported file formats
+- v1.0 - [7z](https://www.7-zip.org/7z.html)
+- v1.2 - [rar](https://www.rarlab.com/rar_file.htm) (only unpack)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+You can [add more file formats to MicZip](https://github.com/MichaelAgarkov/MicZip/wiki/Modifying) since it's open-source!
 
-### Jekyll Themes
+## MicSetup License
+MicZip is published under the [**BSD 4-Clause License**](https://github.com/MichaelAgarkov/MicZip/blob/main/License.txt) for your freedom to make [your own versions of it](https://github.com/MichaelAgarkov/MicZip/wiki/Modifying) and add support for the file formats you want (including your own ones).
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/MichaelAgarkov/MicZip/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+---
+Copyright (c) 2021, Michael Agarkov
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+All rights reserved.
