@@ -31,3 +31,5 @@ MicZip is published under the [**BSD 4-Clause License**](https://github.com/Mich
 
 ---
 Copyright (c) 2021, [Michael Agarkov](https://github.com/MichaelAgarkov)
+<br>
+All rights reserved.
